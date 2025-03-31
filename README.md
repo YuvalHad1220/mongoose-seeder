@@ -5,7 +5,7 @@ An open-source script for generating MongoDB documents based on Mongoose schemas
 ## Installation
 
 ```sh
-npm install mongoose-seeder
+npm i @yuvalhad1220/mongoose-seeder
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ npm install mongoose-seeder
 
 ```typescript
 import mongoose, { Schema, model } from "mongoose";
-import { MongooseSeeder } from "mongoose-seeder";
+import { MongooseSeeder } from "@yuvalhad1220/mongoose-seeder";
 const mongoUri = "mongodb://localhost:27017/test";
 const seeder = new MongooseSeeder(mongoUri);
 await seeder.init();
