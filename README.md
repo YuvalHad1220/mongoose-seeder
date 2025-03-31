@@ -51,6 +51,8 @@ console.log(users[0]);
     lname: "Doe"
 }
 */
+await seeder.flush() // saves to db and clears data map
+await seeder.close() // closes connection to mongo
 ```
 
 ---
