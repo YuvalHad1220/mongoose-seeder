@@ -1,0 +1,26 @@
+{
+  "name": "@yuvalhad1220/mongoose-seeder",
+  "version": "1.0.3",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "mongodb",
+    "mongoose"
+  ],
+  "author": "yuvalhad1220",
+  "license": "MIT",
+  "description": "A utility tool to generate mongodb documents based on a provided schema or model",
+  "repository": {
+    "url": "git+https://github.com/YuvalHad1220/mongoose-seeder.git"
+  },
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
+    "@faker-js/faker": "^9.6.0",
+    "mongoose": "^8.13.1"
+  }
+}
