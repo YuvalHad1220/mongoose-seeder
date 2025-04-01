@@ -60,7 +60,6 @@ class Field {
   }
 
   generateField(fieldType?: string, options?: FieldInitType["options"],): any {
-    
     if (!fieldType) fieldType = this.fieldType;
     if (!options) options = this.options;
     let value: any;
@@ -78,7 +77,7 @@ class Field {
           break;
         }
         case "ObjectId":
-          value = new Types.ObjectId();
+          value = this._generateObjectIdField(options)
           break;
 
         case "String":
@@ -121,6 +120,13 @@ class Field {
     return value;
   }
 
+  private _generateObjectIdField(options: FieldInitType["options"]) {
+    if (options?.options) {
+      return this._getValueFromOption(options)
+    }
+
+    return new mongoose.Types.ObjectId()
+  }
   private _getDependsOnValue(options: FieldInitType["options"]) {
     const customDataType = options!.dependsOn && options!.dependsOn(this.modelsDataMap);
     if (customDataType && typeof options!.options === "function") {
